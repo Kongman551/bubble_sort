@@ -1,0 +1,27 @@
+array_1 = [4, 3, 78, 2, 0, 2]
+array_2 = [6, 3]
+
+def bubble_sort(array)
+	iters = 0
+	print "Array: #{array}\n"
+
+	while iters < array.length - 1
+		count = 0
+
+		array.each_with_index do |_n, idx|
+			if count <= array.length - 2		
+      	if array[idx] > array[idx+1]
+        	array[idx], array[idx+1] = array[idx+1], array[idx]
+				end
+				count += 1
+			end
+		end
+		count = 0
+		iters += 1
+  end
+  print "Sorted: #{array}\n\n"
+end
+
+bubble_sort(array_1)
+bubble_sort(array_2)
+bubble_sort([209, 384, 1234, 2, -12, 8484])
